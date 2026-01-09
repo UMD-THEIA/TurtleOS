@@ -37,7 +37,7 @@ def safe_mode(logger, time):
 # Query the apps service for all installed apps
 def get_apps(logger):
     
-    query = '{ apps { active, app { name, version, author } } }'
+    query = '{ registeredApps { active, app { name, version, author } } }'
     try:
         logger.info("Querying for active applications")
         logger.info("Query: {}".format(query))
